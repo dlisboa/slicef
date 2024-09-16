@@ -30,7 +30,7 @@ func main() {
 func slicef(filename, begin, end string, fn func(string)) {
 	f, err := os.Open(filename)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error())
+		fmt.Fprintln(os.Stderr, err.Error())
 		return
 	}
 
